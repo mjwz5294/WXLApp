@@ -6,9 +6,16 @@ target 'WXLApp' do
   use_frameworks!
 
   # Pods for WXLApp
-pod 'Kingfisher'
-pod 'Alamofire', '~> 4.4'
-pod 'KYCircularProgress'
-pod 'SnapKit'
-pod 'GrowingTextView'
+  pod 'SnapKit'
+  pod 'Then'
+  pod 'Moya'
+  pod 'HandyJSON', '~> 4.0.0-beta.1'
+  pod 'Kingfisher'
+  pod 'Reusable'
+  pod 'LLCycleScrollView'
+  pod 'MJRefresh'
+  pod 'MBProgressHUD'
+  pod 'HMSegmentedControl'
+  pod 'IQKeyboardManagerSwift'
+  pod 'EmptyDataSet-Swift'
 end
