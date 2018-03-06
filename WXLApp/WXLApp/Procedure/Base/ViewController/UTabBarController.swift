@@ -15,48 +15,40 @@ class UTabBarController: UITabBarController {
         
         tabBar.isTranslucent = false
         
-//
-//        /// 首页
-//        let onePageVC = UHomeViewController(titles: ["推荐",
-//                                                     "VIP",
-//                                                     "订阅",
-//                                                     "排行"],
-//                                            vcs: [UBoutiqueListViewController(),
-//                                                  UVIPListViewController(),
-//                                                  USubscibeListViewController(),
-//                                                  URankListViewController()],
-//                                            pageStyle: .navgationBarSegment)
-        addChildViewController(Test1ViewController(),
-                               title: "首页",
+
+        ///聊天
+        addChildViewController(UChatViewController(),
+                               title: "聊天",
                                image: UIImage(named: "tab_home"),
                                selectedImage: UIImage(named: "tab_home_S"))
-//
-//
-//        /// 分类
-//        let classVC = UCateListViewController()
-        addChildViewController(Test2ViewController(),
-                               title: "分类",
+        
+        /// 文章
+        let artVC = UArticleViewController(titles: ["最新",
+                                                    "最热",
+                                                    "推荐"],
+                                           vcs: [UNewArtViewController(),
+                                                 UHotArtViewController(),
+                                                 UBoutiqueViewController()],
+                                           pageStyle: .navgationBarSegment)
+        addChildViewController(artVC,
+                               title: "文章",
                                image: UIImage(named: "tab_class"),
                                selectedImage: UIImage(named: "tab_class_S"))
-//
-//
-//        /// 书架
-//        let bookVC = UBookViewController(titles: ["收藏",
-//                                                  "书单",
-//                                                  "下载"],
-//                                         vcs: [UCollectListViewController(),
-//                                               UDocumentListViewController(),
-//                                               UDownloadListViewController()],
-//                                         pageStyle: .navgationBarSegment)
-        addChildViewController(Test3ViewController(),
-                               title: "书架",
+
+
+        /// 直播
+        let liveVC = ULiveViewController(titles: ["最热",
+                                                  "最新"],
+                                         vcs: [UHotLiveViewController(),
+                                               UNewLiveViewController()],
+                                         pageStyle: .navgationBarSegment)
+        addChildViewController(liveVC,
+                               title: "直播",
                                image: UIImage(named: "tab_book"),
                                selectedImage: UIImage(named: "tab_book_S"))
-//
-//
-//        /// 我的
-//        let mineVC = UMineViewController()
-        addChildViewController(Test4ViewController(),
+
+        /// 我的
+        addChildViewController(UMineViewController(),
                                title: "我的",
                                image: UIImage(named: "tab_mine"),
                                selectedImage: UIImage(named: "tab_mine_S"))

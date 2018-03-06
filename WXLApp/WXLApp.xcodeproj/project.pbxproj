@@ -40,10 +40,15 @@
 		04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04294388204D90DD0019BFFA /* ParallaxHeaderMode.swift */; };
 		04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04294389204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift */; };
 		04294397204D90DD0019BFFA /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */; };
-		042943A2204D928A0019BFFA /* Test1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042943A1204D928A0019BFFA /* Test1ViewController.swift */; };
-		042943A4204D929F0019BFFA /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042943A3204D929F0019BFFA /* Test2ViewController.swift */; };
-		042943A6204D92AA0019BFFA /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042943A5204D92AA0019BFFA /* Test3ViewController.swift */; };
-		042943A8204D92B50019BFFA /* Test4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042943A7204D92B50019BFFA /* Test4ViewController.swift */; };
+		04317285204EC99E00BF854F /* UArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317284204EC99E00BF854F /* UArticleViewController.swift */; };
+		04317287204EC9F000BF854F /* UChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317286204EC9F000BF854F /* UChatViewController.swift */; };
+		04317289204ECA3F00BF854F /* ULiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317288204ECA3F00BF854F /* ULiveViewController.swift */; };
+		0431728B204ECA5D00BF854F /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728A204ECA5D00BF854F /* UMineViewController.swift */; };
+		0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728C204ECDBC00BF854F /* UNewArtViewController.swift */; };
+		0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728E204ECDCC00BF854F /* UHotArtViewController.swift */; };
+		04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */; };
+		04317293204ECF5B00BF854F /* UHotLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317292204ECF5B00BF854F /* UHotLiveViewController.swift */; };
+		04317295204ECF6C00BF854F /* UNewLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317294204ECF6C00BF854F /* UNewLiveViewController.swift */; };
 		96B998B724830BCC38D2AFD2 /* Pods_WXLApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,10 +109,15 @@
 		04294388204D90DD0019BFFA /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		04294389204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
-		042943A1204D928A0019BFFA /* Test1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1ViewController.swift; sourceTree = "<group>"; };
-		042943A3204D929F0019BFFA /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
-		042943A5204D92AA0019BFFA /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
-		042943A7204D92B50019BFFA /* Test4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test4ViewController.swift; sourceTree = "<group>"; };
+		04317284204EC99E00BF854F /* UArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArticleViewController.swift; sourceTree = "<group>"; };
+		04317286204EC9F000BF854F /* UChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChatViewController.swift; sourceTree = "<group>"; };
+		04317288204ECA3F00BF854F /* ULiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULiveViewController.swift; sourceTree = "<group>"; };
+		0431728A204ECA5D00BF854F /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
+		0431728C204ECDBC00BF854F /* UNewArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewArtViewController.swift; sourceTree = "<group>"; };
+		0431728E204ECDCC00BF854F /* UHotArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotArtViewController.swift; sourceTree = "<group>"; };
+		04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueViewController.swift; sourceTree = "<group>"; };
+		04317292204ECF5B00BF854F /* UHotLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotLiveViewController.swift; sourceTree = "<group>"; };
+		04317294204ECF6C00BF854F /* UNewLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewLiveViewController.swift; sourceTree = "<group>"; };
 		748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WXLApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3260ECFB5F56022651B4423 /* Pods-WXLApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC3A253BA5B5F97A97712AB6 /* Pods-WXLApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +211,10 @@
 				04294346204D861D0019BFFA /* AppDelegate.swift */,
 				04294376204D8FE90019BFFA /* Global.swift */,
 				04294347204D861D0019BFFA /* Base */,
-				04294398204D91C00019BFFA /* Cate */,
+				04317274204EC7B000BF854F /* Chat */,
+				04317278204EC7B000BF854F /* Article */,
+				0431727C204EC7B100BF854F /* Live */,
+				04317280204EC7B100BF854F /* Mine */,
 			);
 			path = Procedure;
 			sourceTree = "<group>";
@@ -355,23 +368,137 @@
 			path = EmptyDataSet;
 			sourceTree = "<group>";
 		};
-		04294398204D91C00019BFFA /* Cate */ = {
+		04317274204EC7B000BF854F /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				0429439C204D91C00019BFFA /* ViewController */,
+				04317275204EC7B000BF854F /* View */,
+				04317276204EC7B000BF854F /* ViewController */,
+				04317277204EC7B000BF854F /* ViewModel */,
 			);
-			path = Cate;
+			path = Chat;
 			sourceTree = "<group>";
 		};
-		0429439C204D91C00019BFFA /* ViewController */ = {
+		04317275204EC7B000BF854F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				042943A1204D928A0019BFFA /* Test1ViewController.swift */,
-				042943A3204D929F0019BFFA /* Test2ViewController.swift */,
-				042943A5204D92AA0019BFFA /* Test3ViewController.swift */,
-				042943A7204D92B50019BFFA /* Test4ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04317276204EC7B000BF854F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04317286204EC9F000BF854F /* UChatViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04317277204EC7B000BF854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04317278204EC7B000BF854F /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				04317279204EC7B000BF854F /* View */,
+				0431727A204EC7B000BF854F /* ViewController */,
+				0431727B204EC7B000BF854F /* ViewModel */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		04317279204EC7B000BF854F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0431727A204EC7B000BF854F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04317284204EC99E00BF854F /* UArticleViewController.swift */,
+				0431728C204ECDBC00BF854F /* UNewArtViewController.swift */,
+				04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */,
+				0431728E204ECDCC00BF854F /* UHotArtViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0431727B204EC7B000BF854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0431727C204EC7B100BF854F /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				0431727D204EC7B100BF854F /* View */,
+				0431727E204EC7B100BF854F /* ViewController */,
+				0431727F204EC7B100BF854F /* ViewModel */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		0431727D204EC7B100BF854F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0431727E204EC7B100BF854F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04317288204ECA3F00BF854F /* ULiveViewController.swift */,
+				04317292204ECF5B00BF854F /* UHotLiveViewController.swift */,
+				04317294204ECF6C00BF854F /* UNewLiveViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0431727F204EC7B100BF854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04317280204EC7B100BF854F /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				04317281204EC7B100BF854F /* View */,
+				04317282204EC7B100BF854F /* ViewController */,
+				04317283204EC7B100BF854F /* ViewModel */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		04317281204EC7B100BF854F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04317282204EC7B100BF854F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0431728A204ECA5D00BF854F /* UMineViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04317283204EC7B100BF854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		154ECBD8118A6A2E87480BB0 /* Pods */ = {
@@ -608,32 +735,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */,
+				04317285204EC99E00BF854F /* UArticleViewController.swift in Sources */,
 				04294375204D8EB00019BFFA /* UPageViewController.swift in Sources */,
 				04294392204D90DD0019BFFA /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				04294390204D90DD0019BFFA /* UHairPowder.swift in Sources */,
 				04294361204D861E0019BFFA /* UIViewExtension.swift in Sources */,
 				04294371204D8EB00019BFFA /* UBaseViewController.swift in Sources */,
-				042943A4204D929F0019BFFA /* Test2ViewController.swift in Sources */,
-				042943A6204D92AA0019BFFA /* Test3ViewController.swift in Sources */,
 				04294360204D861E0019BFFA /* UIImageExtensions.swift in Sources */,
-				042943A2204D928A0019BFFA /* Test1ViewController.swift in Sources */,
 				04294374204D8EB00019BFFA /* UTabBarController.swift in Sources */,
 				04294373204D8EB00019BFFA /* UWebViewController.swift in Sources */,
 				0429435A204D861E0019BFFA /* DictionaryExtension.swift in Sources */,
+				04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */,
 				0429435E204D861E0019BFFA /* UIColorExtension.swift in Sources */,
+				04317287204EC9F000BF854F /* UChatViewController.swift in Sources */,
 				04294377204D8FE90019BFFA /* Global.swift in Sources */,
 				0429435B204D861E0019BFFA /* DispatchQueueExtension.swift in Sources */,
+				0431728B204ECA5D00BF854F /* UMineViewController.swift in Sources */,
 				0429435D204D861E0019BFFA /* UIBarButtonItemExtension.swift in Sources */,
+				04317295204ECF6C00BF854F /* UNewLiveViewController.swift in Sources */,
 				0429438D204D90DD0019BFFA /* UIBarButtonItemFixSpace.swift in Sources */,
 				04294391204D90DD0019BFFA /* UCollectionViewAlignedLayout.swift in Sources */,
+				0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */,
 				0429435C204D861E0019BFFA /* StringExtension.swift in Sources */,
+				04317293204ECF5B00BF854F /* UHotLiveViewController.swift in Sources */,
 				04294397204D90DD0019BFFA /* UEmptyDataSet.swift in Sources */,
 				0429435F204D861E0019BFFA /* UIDeviceExtension.swift in Sources */,
 				0429438F204D90DD0019BFFA /* ConstraintArrayDSL.swift in Sources */,
-				042943A8204D92B50019BFFA /* Test4ViewController.swift in Sources */,
 				04294358204D861E0019BFFA /* AppDelegate.swift in Sources */,
 				04294394204D90DD0019BFFA /* ParallaxHeader.swift in Sources */,
 				04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */,
+				04317289204ECA3F00BF854F /* ULiveViewController.swift in Sources */,
 				04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */,
 				0429438E204D90DD0019BFFA /* ConstraintArray+Extensions.swift in Sources */,
 				04294359204D861E0019BFFA /* ArrayExtensions.swift in Sources */,

@@ -1,14 +1,14 @@
 //
-//  Test2ViewController.swift
+//  UHotArtViewController.swift
 //  WXLApp
 //
-//  Created by mac on 2018/3/5.
+//  Created by mac on 2018/3/6.
 //  Copyright © 2018年 mjwz5294. All rights reserved.
 //
 
 import UIKit
 
-class Test2ViewController: UBaseViewController {
+class UHotArtViewController: UBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
