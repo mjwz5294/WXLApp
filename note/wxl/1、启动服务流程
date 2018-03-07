@@ -9,4 +9,4 @@
 2、命令行操作Mysql：mysql -uroot，一般建表的操作就放在一个.sql文件中
 3、联系项目，mysql和redis都没有密码
 
-三、启动服务器：执行 bash startserver.sh
+三、启动服务器：执行 bash startserver.sh，或者进入script目录，执行node main.js
