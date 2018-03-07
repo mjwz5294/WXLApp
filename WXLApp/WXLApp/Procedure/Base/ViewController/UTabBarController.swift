@@ -15,25 +15,24 @@ class UTabBarController: UITabBarController {
         
         tabBar.isTranslucent = false
         
-
-        ///聊天
-        addChildViewController(UChatViewController(),
-                               title: "聊天",
-                               image: UIImage(named: "tab_home"),
-                               selectedImage: UIImage(named: "tab_home_S"))
-        
         /// 文章
-        let artVC = UArticleViewController(titles: ["最新",
-                                                    "最热",
-                                                    "推荐"],
-                                           vcs: [UNewArtViewController(),
-                                                 UHotArtViewController(),
-                                                 UBoutiqueViewController()],
+        let artVC = UArticleViewController(titles: ["推荐",
+                                                    "最新",
+                                                    "最热"],
+                                           vcs: [UBoutiqueViewController(),
+                                                 UNewArtViewController(),
+                                                 UHotArtViewController()],
                                            pageStyle: .navgationBarSegment)
         addChildViewController(artVC,
                                title: "文章",
                                image: UIImage(named: "tab_class"),
                                selectedImage: UIImage(named: "tab_class_S"))
+        
+        ///聊天
+        addChildViewController(UChatViewController(),
+                               title: "聊天",
+                               image: UIImage(named: "tab_home"),
+                               selectedImage: UIImage(named: "tab_home_S"))
 
 
         /// RN,混合APP

@@ -1,0 +1,12 @@
+一、配置redis服务：参考 http://www.runoob.com/redis/redis-tutorial.html
+1、启动：redis-server
+2、命令行操作redis：redis-cli
+3、更多的时候我们自然是在代码中操作redis，redis有相应的js库，可用npm导入
+4、关闭：ctrl+c，或者执行 redis-cli shutdown，参考 http://blog.csdn.net/albertfly/article/details/51581368
+
+二、配置Mysql：参考 http://www.runoob.com/mysql/mysql-insert-query.html
+1、启动Mysql Server：多种方式，mac上最习惯的方式就是在‘设置’中。参考 https://www.cnblogs.com/wajika/p/6588107.html
+2、命令行操作Mysql：mysql -uroot，一般建表的操作就放在一个.sql文件中
+3、联系项目，mysql和redis都没有密码
+
+三、启动服务器：执行 bash startserver.sh
