@@ -42,13 +42,11 @@
 		04294397204D90DD0019BFFA /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */; };
 		04317285204EC99E00BF854F /* UArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317284204EC99E00BF854F /* UArticleViewController.swift */; };
 		04317287204EC9F000BF854F /* UChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317286204EC9F000BF854F /* UChatViewController.swift */; };
-		04317289204ECA3F00BF854F /* ULiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317288204ECA3F00BF854F /* ULiveViewController.swift */; };
 		0431728B204ECA5D00BF854F /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728A204ECA5D00BF854F /* UMineViewController.swift */; };
 		0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728C204ECDBC00BF854F /* UNewArtViewController.swift */; };
 		0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728E204ECDCC00BF854F /* UHotArtViewController.swift */; };
 		04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */; };
-		04317293204ECF5B00BF854F /* UHotLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317292204ECF5B00BF854F /* UHotLiveViewController.swift */; };
-		04317295204ECF6C00BF854F /* UNewLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317294204ECF6C00BF854F /* UNewLiveViewController.swift */; };
+		0467F85C204FC8FD001D06C7 /* UHybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */; };
 		96B998B724830BCC38D2AFD2 /* Pods_WXLApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,13 +109,11 @@
 		0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
 		04317284204EC99E00BF854F /* UArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArticleViewController.swift; sourceTree = "<group>"; };
 		04317286204EC9F000BF854F /* UChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChatViewController.swift; sourceTree = "<group>"; };
-		04317288204ECA3F00BF854F /* ULiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULiveViewController.swift; sourceTree = "<group>"; };
 		0431728A204ECA5D00BF854F /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
 		0431728C204ECDBC00BF854F /* UNewArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewArtViewController.swift; sourceTree = "<group>"; };
 		0431728E204ECDCC00BF854F /* UHotArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotArtViewController.swift; sourceTree = "<group>"; };
 		04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueViewController.swift; sourceTree = "<group>"; };
-		04317292204ECF5B00BF854F /* UHotLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotLiveViewController.swift; sourceTree = "<group>"; };
-		04317294204ECF6C00BF854F /* UNewLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewLiveViewController.swift; sourceTree = "<group>"; };
+		0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHybridViewController.swift; sourceTree = "<group>"; };
 		748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WXLApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3260ECFB5F56022651B4423 /* Pods-WXLApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC3A253BA5B5F97A97712AB6 /* Pods-WXLApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,7 +209,7 @@
 				04294347204D861D0019BFFA /* Base */,
 				04317274204EC7B000BF854F /* Chat */,
 				04317278204EC7B000BF854F /* Article */,
-				0431727C204EC7B100BF854F /* Live */,
+				0467F855204FC8D7001D06C7 /* Hybrid */,
 				04317280204EC7B100BF854F /* Mine */,
 			);
 			path = Procedure;
@@ -435,40 +431,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0431727C204EC7B100BF854F /* Live */ = {
-			isa = PBXGroup;
-			children = (
-				0431727D204EC7B100BF854F /* View */,
-				0431727E204EC7B100BF854F /* ViewController */,
-				0431727F204EC7B100BF854F /* ViewModel */,
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		0431727D204EC7B100BF854F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0431727E204EC7B100BF854F /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				04317288204ECA3F00BF854F /* ULiveViewController.swift */,
-				04317292204ECF5B00BF854F /* UHotLiveViewController.swift */,
-				04317294204ECF6C00BF854F /* UNewLiveViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0431727F204EC7B100BF854F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		04317280204EC7B100BF854F /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +457,38 @@
 			sourceTree = "<group>";
 		};
 		04317283204EC7B100BF854F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0467F855204FC8D7001D06C7 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				0467F856204FC8D7001D06C7 /* View */,
+				0467F857204FC8D7001D06C7 /* ViewController */,
+				0467F859204FC8D7001D06C7 /* ViewModel */,
+			);
+			path = Hybrid;
+			sourceTree = "<group>";
+		};
+		0467F856204FC8D7001D06C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0467F857204FC8D7001D06C7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0467F859204FC8D7001D06C7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -753,19 +747,17 @@
 				0429435B204D861E0019BFFA /* DispatchQueueExtension.swift in Sources */,
 				0431728B204ECA5D00BF854F /* UMineViewController.swift in Sources */,
 				0429435D204D861E0019BFFA /* UIBarButtonItemExtension.swift in Sources */,
-				04317295204ECF6C00BF854F /* UNewLiveViewController.swift in Sources */,
 				0429438D204D90DD0019BFFA /* UIBarButtonItemFixSpace.swift in Sources */,
 				04294391204D90DD0019BFFA /* UCollectionViewAlignedLayout.swift in Sources */,
 				0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */,
 				0429435C204D861E0019BFFA /* StringExtension.swift in Sources */,
-				04317293204ECF5B00BF854F /* UHotLiveViewController.swift in Sources */,
 				04294397204D90DD0019BFFA /* UEmptyDataSet.swift in Sources */,
+				0467F85C204FC8FD001D06C7 /* UHybridViewController.swift in Sources */,
 				0429435F204D861E0019BFFA /* UIDeviceExtension.swift in Sources */,
 				0429438F204D90DD0019BFFA /* ConstraintArrayDSL.swift in Sources */,
 				04294358204D861E0019BFFA /* AppDelegate.swift in Sources */,
 				04294394204D90DD0019BFFA /* ParallaxHeader.swift in Sources */,
 				04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */,
-				04317289204ECA3F00BF854F /* ULiveViewController.swift in Sources */,
 				04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */,
 				0429438E204D90DD0019BFFA /* ConstraintArray+Extensions.swift in Sources */,
 				04294359204D861E0019BFFA /* ArrayExtensions.swift in Sources */,

@@ -1,14 +1,14 @@
 //
-//  UHotLiveViewController.swift
+//  UHybridViewController.swift
 //  WXLApp
 //
-//  Created by mac on 2018/3/6.
+//  Created by mac on 2018/3/7.
 //  Copyright © 2018年 mjwz5294. All rights reserved.
 //
 
 import UIKit
 
-class UHotLiveViewController: UBaseViewController {
+class UHybridViewController: UBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

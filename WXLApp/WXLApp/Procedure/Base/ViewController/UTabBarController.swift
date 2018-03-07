@@ -36,14 +36,9 @@ class UTabBarController: UITabBarController {
                                selectedImage: UIImage(named: "tab_class_S"))
 
 
-        /// 直播
-        let liveVC = ULiveViewController(titles: ["最热",
-                                                  "最新"],
-                                         vcs: [UHotLiveViewController(),
-                                               UNewLiveViewController()],
-                                         pageStyle: .navgationBarSegment)
-        addChildViewController(liveVC,
-                               title: "直播",
+        /// RN,混合APP
+        addChildViewController(UHybridViewController(),
+                               title: "混合",
                                image: UIImage(named: "tab_book"),
                                selectedImage: UIImage(named: "tab_book_S"))
 
