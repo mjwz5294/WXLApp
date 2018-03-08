@@ -42,7 +42,7 @@ class UTabBarController: UITabBarController {
                                selectedImage: UIImage(named: "tab_book_S"))
 
         /// 我的
-        addChildViewController(UMineViewController(),
+        addChildViewController(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UMineViewController"),
                                title: "我的",
                                image: UIImage(named: "tab_mine"),
                                selectedImage: UIImage(named: "tab_mine_S"))
