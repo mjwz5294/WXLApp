@@ -19,15 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBB-6C-qnh">
-                                <rect key="frame" x="67" y="134" width="240" height="128"/>
+                                <rect key="frame" x="67" y="80" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2p-fU-pju">
-                                <rect key="frame" x="139" y="326" width="97" height="70"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJB-L1-OIh">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2T-w4-ivm">
+                                <rect key="frame" x="139" y="298" width="97" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="下载图片"/>
                                 <connections>
-                                    <action selector="refreshImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZD-t4-D7U"/>
+                                    <action selector="refreshImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8r-Vb-1hg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2p-fU-pju">
+                                <rect key="frame" x="139" y="384" width="97" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="上传图片"/>
+                                <connections>
+                                    <action selector="uploadImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jar-Vz-flv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,6 +49,7 @@
                     <navigationItem key="navigationItem" id="YTr-ow-7rc"/>
                     <connections>
                         <outlet property="imgView" destination="tBB-6C-qnh" id="Oiw-LP-qys"/>
+                        <outlet property="uploadImgView" destination="oJB-L1-OIh" id="yeJ-cy-ibV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

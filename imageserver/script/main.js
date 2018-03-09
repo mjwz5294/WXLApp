@@ -22,18 +22,6 @@ app.use(controller('controllers'));
 
 
 
-// const router = require('koa-router')(); 
-// const send = require('koa-send'); // "koa-send": "^4.1.0"
-
-// router.get('/', async function (ctx) {
-//     var fileName = 'head.jpg';
-//     await send(ctx, fileName, { root: __dirname + '/source/image' });
-// });
-// app.use(router.routes())
-
-
-
-
 
 app.listen(3001);
 console.log('image server started at port 3001...');
