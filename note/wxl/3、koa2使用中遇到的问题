@@ -8,4 +8,19 @@
 二、koa2使用过程中的参数传递
 
 
+三、postman的使用
+1、postman中 form-data、x-www-form-urlencoded、raw、binary的区别：http://blog.csdn.net/wangjun5159/article/details/47781443
+2、post文件要用form-data，当然也可以用raw然后自己编辑JSON
+3、post字符串要用x-www-form-urlencoded
+4、cookie与session概念：https://www.cnblogs.com/andy-zhou/p/5360107.html
+5、关于REST规范：
+(1)Rest概念：
+https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014735914606943e2866257aa644b4bdfe01d26d29960b000
+(2)Rest编辑：
+https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014735944539193ab2edd2740f44a79efb438a05e83727000
 
+四、数据库操作
+
+五、REST编辑：
+1、URL组织：/static/开头的URL是静态资源文件，/api/开头的URL就是REST API，其他URL是普通的MVC请求。
+2、添加一个rest.js中间件，使rest api都统一返回json格式数据，并提供了一个简便的返回数据的函数
