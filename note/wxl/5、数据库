@@ -2,3 +2,5 @@
 1、创建会话，用连接池管理会话
 2、执行读写
 3、会话结束
+
+二、使用Sequelize实现ORM：https://itbilu.com/nodejs/npm/VkYIaRPz-.html#api-instance-query

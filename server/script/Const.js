@@ -4,7 +4,7 @@ global.rootDir = __dirname;
 global.artDir = getSourceDir();
 function getSourceDir(){
 	var s = __dirname;
-	s=s.substring(0,s.length-6)+'source';
+	s=s.substring(0,s.length-6)+'source/articles/';
 	return s;
 }
 

@@ -7,6 +7,7 @@ const Article = sequelize.define('articles', {
         autoIncrement: true
     },
     writer: Sequelize.STRING(100),
+    title: Sequelize.STRING(100),
     create_time: Sequelize.BIGINT,
     modified_time: Sequelize.BIGINT
 }, {
