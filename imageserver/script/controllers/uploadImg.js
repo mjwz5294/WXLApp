@@ -15,7 +15,7 @@ function saveImg(ctx){
     busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
       console.log(`File [${fieldname}]: filename: ${filename}`)
       // 文件保存到特定路径
-      file.pipe(fs.createWriteStream('./source/image/'+imgName))
+      file.pipe(fs.createWriteStream('./sources/image/'+imgName))
     })
 
     // 监听结束事件

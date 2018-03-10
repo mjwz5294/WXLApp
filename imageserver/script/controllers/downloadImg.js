@@ -11,9 +11,9 @@ var haveFile = function (filePath) {
 
 var fn_downloadImg = async (ctx, next) => {
   var imageName = ctx.params.imageName;
-  var isImgExist = await haveFile(rootDir+'/source/image/'+imageName);
+  var isImgExist = await haveFile(rootDir+'/sources/image/'+imageName);
   var imgName = isImgExist ? imageName:'head.jpg';
-  await send(ctx,imgName,{root:rootDir+'/source/image'});
+  await send(ctx,imgName,{root:rootDir+'/sources/image'});
 }
 
 module.exports = {
