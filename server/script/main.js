@@ -2,6 +2,8 @@ const Koa = require('koa');
 
 const bodyParser = require('koa-bodyparser');
 
+const Const = require('./Const.js');
+
 const controller = require('./controller');
 
 const rest = require('./rest');

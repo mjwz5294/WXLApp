@@ -19,8 +19,14 @@ https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3
 (2)Rest编辑：
 https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014735944539193ab2edd2740f44a79efb438a05e83727000
 
-四、数据库操作
-
-五、REST编辑：
+四、REST编辑：
 1、URL组织：/static/开头的URL是静态资源文件，/api/开头的URL就是REST API，其他URL是普通的MVC请求。
 2、添加一个rest.js中间件，使rest api都统一返回json格式数据，并提供了一个简便的返回数据的函数
+3、错误处理：
+（1）错误分类：一种是类似403，404，500等HTTP请求错误；一种是业务逻辑的错误
+（2）第一类的错误实际上客户端可以识别，并且我们也无法操控HTTP服务器的错误码，所以服务端需要管的就是错误码不要设计重合了
+（3）重点就是第二类错误，我们会返回一个json，主要包括错误码code，消息内容message，具体数据又在message中分层设计。
+4、错误码设计
+（1）错误码采用字符串形式，意思比较清晰。
+（2）字符串错误码进行分类，比如权限错误可设计为‘auth:bad_password’和‘auth:user_not_found’等
+（3）用throw语句抛出错误，而不用前面设计的rest中间件提供的rest方法，主要是后者有使用范围限制，而前者随处可用

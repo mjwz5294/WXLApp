@@ -10,10 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.0.0",
-    "koa-router": "7.0.0",
     "koa-bodyparser": "3.2.0",
-    "mysql": "^2.13.0",
+    "koa-router": "7.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.2",
+    "npm": "^5.7.1",
     "redis": "^2.7.1",
+    "sequelize": "^4.35.4",
     "socket.io": "^1.7.3"
   }
 }
