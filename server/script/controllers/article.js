@@ -1,15 +1,32 @@
 const Article = require('../models/article');
 const fs = require('fs');
 
+//tools
+function getClearTitle(artModel){
+	let titleArr = artModel.dataValues.title.split('---');
+	return titleArr[0];
+}
+
+function getBackArtjson(artModel,contentStr,title){
+	backArt = artModel.dataValues;
+	backArt.contentStr = contentStr;
+	backArt.title = title;
+	return backArt;
+
+}
+
+//获取文章列表
 var getArts = async ( ctx ) => {
 	var arts = await Article.findAll({});
+	let backArts = [];
 	for (var i = 0; i < arts.length; i++) {
 		let art = arts[i];
 		let contentStr = fs.readFileSync(artDir+art.title, 'utf-8');
-    	art.dataValues.contentStr = contentStr;
+		let backArt = getBackArtjson(art,contentStr,getClearTitle(art));
+		backArts.push(backArt);
 	};
 	ctx.rest({
-	    data: arts
+	    data: backArts
 	});
 }
 
@@ -24,18 +41,12 @@ var getArtWithId = async ( ctx ) => {
         }
     });
     
-    if (arts&&arts[0]) {
-    	let art = arts[0];
-    	var contentStr = fs.readFileSync(artDir+art.title, 'utf-8');
-    	art.dataValues.contentStr = contentStr;
-    	ctx.rest({
-		    data: art
-		});
-    }else{
-    	ctx.rest({
-		    data: {result:'没查到'}
-		});
-    }
+    let art = arts[0];
+	var contentStr = fs.readFileSync(artDir+art.title, 'utf-8');
+	let backArt = getBackArtjson(art,contentStr,getClearTitle(art));
+	ctx.rest({
+	    data: backArt
+	});
 }
 
 /*
@@ -45,19 +56,21 @@ contentStr:文章内容，应该是一个数组，拼接好后写入文件
 */
 var createArt = async ( ctx ) => {
 	let postData = ctx.request.body
+	let saveTitle = postData.title+'---'+Date.now()
 
-	fs.writeFileSync(artDir+postData.title, postData.contentStr);
+	fs.writeFileSync(artDir+saveTitle, postData.contentStr);
 
 	var art = await Article.create({
         writer: postData.writer,
-        title: postData.title,
+        title: saveTitle,
         create_time: Date.now(),
         modified_time: Date.now()
     });
-    art.contentStr	 = postData.contentStr;
+
+    let backArt = getBackArtjson(art,postData.contentStr,postData.title);
 
 	ctx.rest({
-	    data: art
+	    data: backArt
 	});
 }
 
@@ -69,10 +82,19 @@ contentStr:文章内容
 var editArt = async ( ctx ) => {
 	let postData = ctx.request.body
 
-	fs.writeFileSync(artDir+postData.title, postData.contentStr);
+	let artId = ctx.params.artId
+	var arts = await Article.findAll({
+        where: {
+            id: artId
+        }
+    });
+    let art = arts[0];
+    let saveTitle = art.dataValues.title;
+
+	fs.writeFileSync(artDir+saveTitle, postData.contentStr);
 
 	var pram={
-        title: postData.title,
+        title: saveTitle,
         modified_time: Date.now()
     };
 	var success = await Article.update(pram,{
