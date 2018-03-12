@@ -25,8 +25,16 @@ var getArts = async ( ctx ) => {
 		let backArt = getBackArtjson(art,contentStr,getClearTitle(art));
 		backArts.push(backArt);
 	};
+
 	ctx.rest({
-	    data: backArts
+		code: 'ERROR_NOERROR',
+	    data: {
+	    	message:commonCode.ERROR_NOERROR,
+    		returnData: {
+    			artArr:backArts
+    		},
+    		stateCode: 'ERROR_NOERROR'
+	    }
 	});
 }
 
@@ -34,7 +42,7 @@ var getArts = async ( ctx ) => {
 id:文章id
 */
 var getArtWithId = async ( ctx ) => {
-	let artId = ctx.params.artId
+	let artId = ctx.request.query.artId
 	var arts = await Article.findAll({
         where: {
             id: artId
@@ -44,8 +52,14 @@ var getArtWithId = async ( ctx ) => {
     let art = arts[0];
 	var contentStr = fs.readFileSync(artDir+art.title, 'utf-8');
 	let backArt = getBackArtjson(art,contentStr,getClearTitle(art));
+
 	ctx.rest({
-	    data: backArt
+		code: 'ERROR_NOERROR',
+	    data: {
+	    	message:commonCode.ERROR_NOERROR,
+    		returnData: backArt,
+    		stateCode: 'ERROR_NOERROR'
+	    }
 	});
 }
 
@@ -70,7 +84,12 @@ var createArt = async ( ctx ) => {
     let backArt = getBackArtjson(art,postData.contentStr,postData.title);
 
 	ctx.rest({
-	    data: backArt
+		code: 'ERROR_NOERROR',
+	    data: {
+	    	message:commonCode.ERROR_NOERROR,
+    		returnData: backArt,
+    		stateCode: 'ERROR_NOERROR'
+	    }
 	});
 }
 
@@ -82,7 +101,7 @@ contentStr:文章内容
 var editArt = async ( ctx ) => {
 	let postData = ctx.request.body
 
-	let artId = ctx.params.artId
+	let artId = postData.artId
 	var arts = await Article.findAll({
         where: {
             id: artId
@@ -102,7 +121,11 @@ var editArt = async ( ctx ) => {
 	});
 
 	ctx.rest({
-	    data: {success:success}
+		code: 'ERROR_NOERROR',
+	    data: {
+	    	message:commonCode.ERROR_NOERROR,
+    		stateCode: 'ERROR_NOERROR'
+	    }
 	});
 }
 
@@ -112,17 +135,30 @@ id:文章id
 var delArt = async ( ctx ) => {
 	let postData = ctx.request.body
 
-	fs.unlinkSync(artDir+postData.title);
+	let artId = postData.artId
+	var arts = await Article.findAll({
+        where: {
+            id: artId
+        }
+    });
+    let art = arts[0];
 
-	var success = await Article.destroy({'where':{'id':postData.id}})
+	fs.unlinkSync(artDir+art.title);
+
+	var success = await Article.destroy({'where':{'id':postData.artId}})
+
 	ctx.rest({
-	    data: {success:success}
+		code: 'ERROR_NOERROR',
+	    data: {
+	    	message:commonCode.ERROR_NOERROR,
+    		stateCode: 'ERROR_NOERROR'
+	    }
 	});
 }
 
 module.exports = {
     'GET /api/articles/getArt': getArts,
-    'GET /api/articles/getArt/:artId': getArtWithId,
+    'GET /api/articles/getArtWithId': getArtWithId,
     'POST /api/articles/createArt': createArt,
     'POST /api/articles/editArt': editArt,
     'POST /api/articles/delArt': delArt,

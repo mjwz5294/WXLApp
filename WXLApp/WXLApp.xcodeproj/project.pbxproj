@@ -47,6 +47,8 @@
 		0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728E204ECDCC00BF854F /* UHotArtViewController.swift */; };
 		04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */; };
 		0467F85C204FC8FD001D06C7 /* UHybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */; };
+		048E3F4D205524B5004B2BA3 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E3F4C205524B5004B2BA3 /* UAPI.swift */; };
+		048E3F4F20552C7F004B2BA3 /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E3F4E20552C7F004B2BA3 /* CommonModel.swift */; };
 		96B998B724830BCC38D2AFD2 /* Pods_WXLApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		0431728E204ECDCC00BF854F /* UHotArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotArtViewController.swift; sourceTree = "<group>"; };
 		04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueViewController.swift; sourceTree = "<group>"; };
 		0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHybridViewController.swift; sourceTree = "<group>"; };
+		048E3F4C205524B5004B2BA3 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
+		048E3F4E20552C7F004B2BA3 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		748619052F62059CF67FB1E4 /* Pods_WXLApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WXLApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3260ECFB5F56022651B4423 /* Pods-WXLApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC3A253BA5B5F97A97712AB6 /* Pods-WXLApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXLApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WXLApp/Pods-WXLApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 		0429434B204D861D0019BFFA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				048E3F4C205524B5004B2BA3 /* UAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 		04294357204D861E0019BFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				048E3F4E20552C7F004B2BA3 /* CommonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -741,6 +747,7 @@
 				04294373204D8EB00019BFFA /* UWebViewController.swift in Sources */,
 				0429435A204D861E0019BFFA /* DictionaryExtension.swift in Sources */,
 				04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */,
+				048E3F4D205524B5004B2BA3 /* UAPI.swift in Sources */,
 				0429435E204D861E0019BFFA /* UIColorExtension.swift in Sources */,
 				04317287204EC9F000BF854F /* UChatViewController.swift in Sources */,
 				04294377204D8FE90019BFFA /* Global.swift in Sources */,
@@ -756,6 +763,7 @@
 				0429435F204D861E0019BFFA /* UIDeviceExtension.swift in Sources */,
 				0429438F204D90DD0019BFFA /* ConstraintArrayDSL.swift in Sources */,
 				04294358204D861E0019BFFA /* AppDelegate.swift in Sources */,
+				048E3F4F20552C7F004B2BA3 /* CommonModel.swift in Sources */,
 				04294394204D90DD0019BFFA /* ParallaxHeader.swift in Sources */,
 				04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */,
 				04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */,

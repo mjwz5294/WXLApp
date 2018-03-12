@@ -21,6 +21,9 @@ global.sequelize = new Sequelize(config.database, config.username, config.passwo
     }
 });
 
+//配置公共错误码
+global.commonCode = require('./codes/common');
+
 //配置一些函数工具
 global.typeTool = require('./utils/type');
 global.datetimeTool = require('./utils/datetime');
