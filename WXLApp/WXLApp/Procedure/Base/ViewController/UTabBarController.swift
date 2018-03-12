@@ -20,7 +20,7 @@ class UTabBarController: UITabBarController {
                                                     "最新",
                                                     "最热"],
                                            vcs: [UBoutiqueViewController(),
-                                                 UNewArtViewController(),
+                                                 artSB.instantiateViewController(withIdentifier: "UNewArtViewController"),
                                                  UHotArtViewController()],
                                            pageStyle: .navgationBarSegment)
         addChildViewController(artVC,
@@ -42,7 +42,7 @@ class UTabBarController: UITabBarController {
                                selectedImage: UIImage(named: "tab_book_S"))
 
         /// 我的
-        addChildViewController(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UMineViewController"),
+        addChildViewController(mainSB.instantiateViewController(withIdentifier: "UMineViewController"),
                                title: "我的",
                                image: UIImage(named: "tab_mine"),
                                selectedImage: UIImage(named: "tab_mine_S"))

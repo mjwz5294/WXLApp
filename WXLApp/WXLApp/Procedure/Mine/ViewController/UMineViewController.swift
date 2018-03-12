@@ -121,25 +121,25 @@ UINavigationControllerDelegate {
     
     @IBAction func testApi(_ sender: Any) {
         
-//        ApiLoadingProvider.request(UAPI.getArts, model: ArtArrModel.self) { (returnData) in
-//
-//        }
+        ApiLoadingProvider.request(UAPI.getArts, model: ArtArrModel.self) { (returnData) in
+
+        }
         
-//        ApiLoadingProvider.request(UAPI.getArtWithId(artId:2), model: ArtModel.self) { (returnData) in
-//
-//        }
+        ApiLoadingProvider.request(UAPI.getArtWithId(artId:2), model: ArtModel.self) { (returnData) in
+
+        }
         
-//        ApiLoadingProvider.request(UAPI.createArt(writer: "writer2",title: "title2",contentStr: "contentStr2"), model: ArtModel.self) { (returnData) in
-//            
-//        }delArt(artId: Int)
+        ApiLoadingProvider.request(UAPI.createArt(writer: "writer2",title: "title2",contentStr: "contentStr2"), model: ArtModel.self) { (returnData) in
+            
+        }
         
-//        ApiLoadingProvider.request(UAPI.editArt(artId: 4,title: "title3",contentStr: "contentStr3"), model: ArtModel.self) { (returnData) in
-//
-//        }
+        ApiLoadingProvider.request(UAPI.editArt(artId: 4,title: "title3",contentStr: "contentStr3"), model: ArtModel.self) { (returnData) in
+
+        }
         
-//        ApiLoadingProvider.request(UAPI.delArt(artId: 4), model: ArtModel.self) { (returnData) in
-//            
-//        }
+        ApiLoadingProvider.request(UAPI.delArt(artId: 4), model: ArtModel.self) { (returnData) in
+            
+        }
         
     }
     /*

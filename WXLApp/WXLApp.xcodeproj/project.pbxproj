@@ -40,6 +40,11 @@
 		04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04294388204D90DD0019BFFA /* ParallaxHeaderMode.swift */; };
 		04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04294389204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift */; };
 		04294397204D90DD0019BFFA /* UEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */; };
+		042A8E3E205655C300184ADD /* ArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A8E3D205655C300184ADD /* ArtModel.swift */; };
+		042A8E402056572800184ADD /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042A8E3F2056572800184ADD /* Article.storyboard */; };
+		042A8E432056587700184ADD /* ArtListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A8E412056587700184ADD /* ArtListTableViewCell.swift */; };
+		042A8E442056587700184ADD /* ArtListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042A8E422056587700184ADD /* ArtListTableViewCell.xib */; };
+		042A8E4620565B2C00184ADD /* UBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A8E4520565B2C00184ADD /* UBaseTableViewCell.swift */; };
 		04317285204EC99E00BF854F /* UArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317284204EC99E00BF854F /* UArticleViewController.swift */; };
 		04317287204EC9F000BF854F /* UChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317286204EC9F000BF854F /* UChatViewController.swift */; };
 		0431728B204ECA5D00BF854F /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728A204ECA5D00BF854F /* UMineViewController.swift */; };
@@ -109,6 +114,11 @@
 		04294388204D90DD0019BFFA /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		04294389204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
 		0429438B204D90DD0019BFFA /* UEmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEmptyDataSet.swift; sourceTree = "<group>"; };
+		042A8E3D205655C300184ADD /* ArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtModel.swift; sourceTree = "<group>"; };
+		042A8E3F2056572800184ADD /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		042A8E412056587700184ADD /* ArtListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtListTableViewCell.swift; sourceTree = "<group>"; };
+		042A8E422056587700184ADD /* ArtListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtListTableViewCell.xib; sourceTree = "<group>"; };
+		042A8E4520565B2C00184ADD /* UBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBaseTableViewCell.swift; sourceTree = "<group>"; };
 		04317284204EC99E00BF854F /* UArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArticleViewController.swift; sourceTree = "<group>"; };
 		04317286204EC9F000BF854F /* UChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UChatViewController.swift; sourceTree = "<group>"; };
 		0431728A204ECA5D00BF854F /* UMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				0429431B204D7FFB0019BFFA /* Main.storyboard */,
+				042A8E3F2056572800184ADD /* Article.storyboard */,
 				0429431E204D7FFB0019BFFA /* Assets.xcassets */,
 				04294320204D7FFB0019BFFA /* LaunchScreen.storyboard */,
 				04294323204D7FFB0019BFFA /* Info.plist */,
@@ -211,8 +222,8 @@
 				04294346204D861D0019BFFA /* AppDelegate.swift */,
 				04294376204D8FE90019BFFA /* Global.swift */,
 				04294347204D861D0019BFFA /* Base */,
-				04317274204EC7B000BF854F /* Chat */,
 				04317278204EC7B000BF854F /* Article */,
+				04317274204EC7B000BF854F /* Chat */,
 				0467F855204FC8D7001D06C7 /* Hybrid */,
 				04317280204EC7B100BF854F /* Mine */,
 			);
@@ -232,6 +243,7 @@
 		04294348204D861D0019BFFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042A8E4520565B2C00184ADD /* UBaseTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +382,14 @@
 			path = EmptyDataSet;
 			sourceTree = "<group>";
 		};
+		042A8E3C2056555D00184ADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				042A8E3D205655C300184ADD /* ArtModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04317274204EC7B000BF854F /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +425,7 @@
 		04317278204EC7B000BF854F /* Article */ = {
 			isa = PBXGroup;
 			children = (
+				042A8E3C2056555D00184ADD /* Model */,
 				04317279204EC7B000BF854F /* View */,
 				0431727A204EC7B000BF854F /* ViewController */,
 				0431727B204EC7B000BF854F /* ViewModel */,
@@ -415,6 +436,8 @@
 		04317279204EC7B000BF854F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042A8E412056587700184ADD /* ArtListTableViewCell.swift */,
+				042A8E422056587700184ADD /* ArtListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -629,6 +652,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04294322204D7FFB0019BFFA /* LaunchScreen.storyboard in Resources */,
+				042A8E402056572800184ADD /* Article.storyboard in Resources */,
+				042A8E442056587700184ADD /* ArtListTableViewCell.xib in Resources */,
 				0429431F204D7FFB0019BFFA /* Assets.xcassets in Resources */,
 				0429431D204D7FFB0019BFFA /* Main.storyboard in Resources */,
 			);
@@ -749,6 +774,7 @@
 				04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */,
 				048E3F4D205524B5004B2BA3 /* UAPI.swift in Sources */,
 				0429435E204D861E0019BFFA /* UIColorExtension.swift in Sources */,
+				042A8E4620565B2C00184ADD /* UBaseTableViewCell.swift in Sources */,
 				04317287204EC9F000BF854F /* UChatViewController.swift in Sources */,
 				04294377204D8FE90019BFFA /* Global.swift in Sources */,
 				0429435B204D861E0019BFFA /* DispatchQueueExtension.swift in Sources */,
@@ -764,6 +790,7 @@
 				0429438F204D90DD0019BFFA /* ConstraintArrayDSL.swift in Sources */,
 				04294358204D861E0019BFFA /* AppDelegate.swift in Sources */,
 				048E3F4F20552C7F004B2BA3 /* CommonModel.swift in Sources */,
+				042A8E3E205655C300184ADD /* ArtModel.swift in Sources */,
 				04294394204D90DD0019BFFA /* ParallaxHeader.swift in Sources */,
 				04294395204D90DD0019BFFA /* ParallaxHeaderMode.swift in Sources */,
 				04294396204D90DD0019BFFA /* UIScrollView+ParallaxHeader.swift in Sources */,
@@ -772,6 +799,7 @@
 				04294372204D8EB00019BFFA /* UNavigationController.swift in Sources */,
 				0429438C204D90DD0019BFFA /* URefresh.swift in Sources */,
 				04294393204D90DD0019BFFA /* UNoticeBar.swift in Sources */,
+				042A8E432056587700184ADD /* ArtListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

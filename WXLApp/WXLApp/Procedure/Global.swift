@@ -143,3 +143,7 @@ extension UIApplication {
     }
 }
 
+var mainSB = UIStoryboard(name: "Main", bundle: nil)
+var artSB = UIStoryboard(name: "Article", bundle: nil)
+
+

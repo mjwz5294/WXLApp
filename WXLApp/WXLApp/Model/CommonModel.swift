@@ -8,21 +8,6 @@
 
 import HandyJSON
 
-
-
-struct ArtModel: HandyJSON {
-    var id: Int = 0
-    var writer: String?
-    var title: String?
-    var create_time: String?
-    var modified_time: String?
-    var contentStr: String?
-}
-
-struct ArtArrModel: HandyJSON {
-    var artArr: [ArtModel]?
-}
-
 struct ReturnData<T: HandyJSON>: HandyJSON {
     var message:String?
     var returnData: T?

@@ -98,7 +98,6 @@ extension Response {
         guard let model = JSONDeserializer<T>.deserializeFrom(json: jsonString) else {
             throw MoyaError.jsonMapping(self)
         }
-        print(model)
         return model
     }
 }
@@ -115,7 +114,6 @@ extension MoyaProvider {
                 completion(nil)
                 return
             }
-            print(returnData)
             completion(returnData?.data?.returnData)
         })
     }
