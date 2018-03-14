@@ -117,7 +117,7 @@ var editArt = async ( ctx ) => {
         modified_time: Date.now()
     };
 	var success = await Article.update(pram,{
-		where:{'id':postData.id}
+		where:{'id':artId}
 	});
 
 	ctx.rest({
