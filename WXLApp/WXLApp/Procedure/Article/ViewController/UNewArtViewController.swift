@@ -21,6 +21,7 @@ class UNewArtViewController: UBaseViewController {
     }
     
     override func configUI() {
+        tableView.tableFooterView = UIView()
         tableView.register(cellType: ArtListTableViewCell.self)
         loadData()
     }
@@ -58,8 +59,10 @@ extension UNewArtViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = UBaseViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        
+        let vc:UCreateArtViewController = artSB.instantiateViewController(withIdentifier: "UCreateArtViewController") as! UCreateArtViewController
+        vc.artModel = artList[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

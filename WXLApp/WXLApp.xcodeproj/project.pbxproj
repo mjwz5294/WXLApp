@@ -51,6 +51,8 @@
 		0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728C204ECDBC00BF854F /* UNewArtViewController.swift */; };
 		0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728E204ECDCC00BF854F /* UHotArtViewController.swift */; };
 		04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */; };
+		0458A8D82058C54C00476866 /* UCreateArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A8D72058C54C00476866 /* UCreateArtViewController.swift */; };
+		0458A8DA2059073600476866 /* UArtEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A8D92059073600476866 /* UArtEditTableViewCell.swift */; };
 		0467F85C204FC8FD001D06C7 /* UHybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */; };
 		048E3F4D205524B5004B2BA3 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E3F4C205524B5004B2BA3 /* UAPI.swift */; };
 		048E3F4F20552C7F004B2BA3 /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E3F4E20552C7F004B2BA3 /* CommonModel.swift */; };
@@ -125,6 +127,8 @@
 		0431728C204ECDBC00BF854F /* UNewArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewArtViewController.swift; sourceTree = "<group>"; };
 		0431728E204ECDCC00BF854F /* UHotArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotArtViewController.swift; sourceTree = "<group>"; };
 		04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueViewController.swift; sourceTree = "<group>"; };
+		0458A8D72058C54C00476866 /* UCreateArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCreateArtViewController.swift; sourceTree = "<group>"; };
+		0458A8D92059073600476866 /* UArtEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArtEditTableViewCell.swift; sourceTree = "<group>"; };
 		0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHybridViewController.swift; sourceTree = "<group>"; };
 		048E3F4C205524B5004B2BA3 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 		048E3F4E20552C7F004B2BA3 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
@@ -185,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				0429431B204D7FFB0019BFFA /* Main.storyboard */,
-				042A8E3F2056572800184ADD /* Article.storyboard */,
 				0429431E204D7FFB0019BFFA /* Assets.xcassets */,
 				04294320204D7FFB0019BFFA /* LaunchScreen.storyboard */,
 				04294323204D7FFB0019BFFA /* Info.plist */,
@@ -425,6 +428,7 @@
 		04317278204EC7B000BF854F /* Article */ = {
 			isa = PBXGroup;
 			children = (
+				042A8E3F2056572800184ADD /* Article.storyboard */,
 				042A8E3C2056555D00184ADD /* Model */,
 				04317279204EC7B000BF854F /* View */,
 				0431727A204EC7B000BF854F /* ViewController */,
@@ -438,6 +442,7 @@
 			children = (
 				042A8E412056587700184ADD /* ArtListTableViewCell.swift */,
 				042A8E422056587700184ADD /* ArtListTableViewCell.xib */,
+				0458A8D92059073600476866 /* UArtEditTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 			children = (
 				04317284204EC99E00BF854F /* UArticleViewController.swift */,
 				0431728C204ECDBC00BF854F /* UNewArtViewController.swift */,
+				0458A8D72058C54C00476866 /* UCreateArtViewController.swift */,
 				04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */,
 				0431728E204ECDCC00BF854F /* UHotArtViewController.swift */,
 			);
@@ -767,6 +773,7 @@
 				04294390204D90DD0019BFFA /* UHairPowder.swift in Sources */,
 				04294361204D861E0019BFFA /* UIViewExtension.swift in Sources */,
 				04294371204D8EB00019BFFA /* UBaseViewController.swift in Sources */,
+				0458A8DA2059073600476866 /* UArtEditTableViewCell.swift in Sources */,
 				04294360204D861E0019BFFA /* UIImageExtensions.swift in Sources */,
 				04294374204D8EB00019BFFA /* UTabBarController.swift in Sources */,
 				04294373204D8EB00019BFFA /* UWebViewController.swift in Sources */,
@@ -775,6 +782,7 @@
 				048E3F4D205524B5004B2BA3 /* UAPI.swift in Sources */,
 				0429435E204D861E0019BFFA /* UIColorExtension.swift in Sources */,
 				042A8E4620565B2C00184ADD /* UBaseTableViewCell.swift in Sources */,
+				0458A8D82058C54C00476866 /* UCreateArtViewController.swift in Sources */,
 				04317287204EC9F000BF854F /* UChatViewController.swift in Sources */,
 				04294377204D8FE90019BFFA /* Global.swift in Sources */,
 				0429435B204D861E0019BFFA /* DispatchQueueExtension.swift in Sources */,

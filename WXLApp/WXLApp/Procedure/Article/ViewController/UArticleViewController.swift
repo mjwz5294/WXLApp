@@ -15,10 +15,24 @@ class UArticleViewController: UPageViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //由于继承自UPageViewController，从下一级vc返回后，item会变透明，这个bug还没解决，所以放这里每次都重建一个。
+        let item = UIBarButtonItem(title: "新建", style: .plain, target: self, action: #selector(createArt))
+        item.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = item
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func createArt(){
+        let vc = artSB.instantiateViewController(withIdentifier: "UCreateArtViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 

@@ -45,7 +45,7 @@ enum UAPI{
 
 extension UAPI: TargetType {
     
-    var baseURL: URL { return URL(string: "http://192.168.0.166:3000/")! }
+    var baseURL: URL { return URL(string: "http://192.168.1.186:3000/")! }
     
     var path: String {
         switch self {

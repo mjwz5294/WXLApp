@@ -41,7 +41,7 @@ class UBaseViewController: UIViewController {
             navi.disablePopGesture = false
             navi.setNavigationBarHidden(false, animated: true)
             if navi.viewControllers.count > 1 {
-                navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_white"),
+                navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回",
                                                                    target: self,
                                                                    action: #selector(pressBack))
             }
