@@ -21,14 +21,18 @@ class UNewArtViewController: UBaseViewController {
     }
     
     override func configUI() {
-        tableView.tableFooterView = UIView()
+//        tableView.tableFooterView = UIView()
+        tableView.uHead = URefreshHeader{ [weak self] in self?.loadData() }
+        tableView.uFoot = URefreshTipKissFooter(with: "底部测试~")
+        tableView.uempty = UEmptyView { [weak self] in self?.loadData() }
         tableView.register(cellType: ArtListTableViewCell.self)
         loadData()
     }
     
     @objc private func loadData() {
         ApiLoadingProvider.request(UAPI.getArts, model: ArtArrModel.self) { (returnData) in
-            self.artList = (returnData?.artArr)!
+            self.tableView.uHead.endRefreshing()
+            self.artList = returnData?.artArr ?? []
             self.tableView.reloadData()
         }
     }

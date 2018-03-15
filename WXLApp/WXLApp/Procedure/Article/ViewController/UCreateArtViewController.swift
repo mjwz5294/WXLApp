@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
+import Alamofire
+import Photos
+
 //用于编辑或展示文章
 class UCreateArtViewController: UBaseViewController {
     
@@ -91,7 +95,7 @@ class UCreateArtViewController: UBaseViewController {
     
     func createArt() {
         ApiLoadingProvider.request(UAPI.createArt(writer: "wxl", title: "hahaha", contentStr: contentArrToStr(arr: contentArr)), model: ArtModel.self) { (returnData) in
-            self.artModel = returnData!
+            self.artModel = returnData ?? ArtModel()
             self.tableView.reloadData()
         }
     }
@@ -111,16 +115,6 @@ extension UCreateArtViewController{
         isAddingCell = true
         selectedIndexPath = getCellIndex(sender)
         showEditView()
-    }
-    
-    @IBAction func selectPhotoBtnTapped(_ sender: Any) {
-        isAddingCell = true
-        
-    }
-    
-    @IBAction func addPhotoBtnTapped(_ sender: Any) {
-        isAddingCell = true
-        
     }
     
     func getCellIndex(_ sender: Any) -> (IndexPath?) {
@@ -154,6 +148,16 @@ extension UCreateArtViewController{
         model.isImg = false
         model.content = textEditTF.text
         
+        refreshContentArr(model)
+        
+    }
+    
+    @IBAction func textCancleBtnTapped(_ sender: Any) {
+        textEditView.isHidden = true
+        textEditTF.resignFirstResponder()
+    }
+    
+    func refreshContentArr(_ model:ArtCellModel){
         var index = 0
         if selectedIndexPath != nil {
             index = (selectedIndexPath?.row)!+1
@@ -162,14 +166,107 @@ extension UCreateArtViewController{
             contentArr.insert(model, at: index)
         }else{
             contentArr.replaceSubrange(Range(index-1..<index), with: [model])
-        }        
+        }
         tableView.reloadData()
+    }
+    
+}
+
+extension UCreateArtViewController: UIImagePickerControllerDelegate,
+UINavigationControllerDelegate{
+    
+    @IBAction func selectPhotoBtnTapped(_ sender: Any) {
+        isAddingCell = true
+        selectedIndexPath = getCellIndex(sender)
+        
+        showImgSelecter()
         
     }
     
-    @IBAction func textCancleBtnTapped(_ sender: Any) {
-        textEditView.isHidden = true
-        textEditTF.resignFirstResponder()
+    @IBAction func addPhotoBtnTapped(_ sender: Any) {
+        isAddingCell = true
+        
+    }
+    
+    func showImgSelecter() {
+        //判断设置是否支持图片库
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            //初始化图片控制器
+            let picker = UIImagePickerController()
+            //设置代理
+            picker.delegate = self
+            //指定图片控制器类型
+            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            //设置是否允许编辑
+            picker.allowsEditing = true
+            //弹出控制器，显示界面
+            self.present(picker, animated: true, completion: {
+                () -> Void in
+            })
+        }else{
+            print("读取相册错误")
+        }
+    }
+    
+    //选择图片成功后代理
+    @objc func imagePickerController(_ picker: UIImagePickerController,
+                                     didFinishPickingMediaWithInfo info: [String : Any]) {
+        //查看info对象
+        //        print(info)
+        
+        //获取选取后的图片
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //转成jpg格式图片
+        guard let jpegData = UIImageJPEGRepresentation(pickedImage, 0.5) else {
+            return
+        }
+        //上传
+        self.uploadImage(imageData: jpegData,img:pickedImage)
+        
+        //图片控制器退出
+        picker.dismiss(animated: true, completion: {
+            () -> Void in
+        })
+    }
+    
+    //上传图片到服务器
+    func uploadImage(imageData : Data,img:UIImage){
+        var filename = "img-"+String(Date().timeIntervalSince1970)
+        if !isAddingCell {
+            filename = contentArr[(selectedIndexPath?.row)!].content!
+        }
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                //采用post表单上传
+                // 参数解释：
+                //withName:类似协议名，和后台服务器的name要一致 ；fileName:可以充分利用写成用户的id，但是格式要写对； mimeType：规定的，要上传其他格式可以自行百度查一下
+                multipartFormData.append(imageData, withName: "file", fileName: filename, mimeType: "image/jpeg")
+                
+        },to: imgServerPathUpload,encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                //连接服务器成功后，对json的处理
+                upload.responseJSON { response in
+                    //解包
+                    guard let result = response.result.value else { return }
+                    print("json:\(result)")
+                    
+                    var model = ArtCellModel()
+                    model.isImg = true
+                    model.content = filename
+                    
+                    self.refreshContentArr(model)
+                }
+                //获取上传进度
+                upload.uploadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                    print("图片上传进度: \(progress.fractionCompleted)")
+                }
+            case .failure(let encodingError):
+                //打印连接失败原因
+                print(encodingError)
+            }
+        })
     }
     
 }
@@ -200,7 +297,14 @@ extension UCreateArtViewController: UITableViewDelegate, UITableViewDataSource {
         
         isAddingCell = false
         selectedIndexPath = indexPath
-        showEditView()
+        let model = contentArr[(indexPath.row)]
+        if model.isImg == true {
+            showImgSelecter()
+        }else{
+            showEditView()
+        }
+        
+        
     }
 }
 

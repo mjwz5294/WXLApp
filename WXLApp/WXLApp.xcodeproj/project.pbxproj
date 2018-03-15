@@ -51,6 +51,7 @@
 		0431728D204ECDBC00BF854F /* UNewArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728C204ECDBC00BF854F /* UNewArtViewController.swift */; };
 		0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431728E204ECDCC00BF854F /* UHotArtViewController.swift */; };
 		04317291204ECDDB00BF854F /* UBoutiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */; };
+		045894A0205A4634003757B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458949F205A4634003757B2 /* UIImageViewExtension.swift */; };
 		0458A8D82058C54C00476866 /* UCreateArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A8D72058C54C00476866 /* UCreateArtViewController.swift */; };
 		0458A8DA2059073600476866 /* UArtEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458A8D92059073600476866 /* UArtEditTableViewCell.swift */; };
 		0467F85C204FC8FD001D06C7 /* UHybridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */; };
@@ -127,6 +128,7 @@
 		0431728C204ECDBC00BF854F /* UNewArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNewArtViewController.swift; sourceTree = "<group>"; };
 		0431728E204ECDCC00BF854F /* UHotArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHotArtViewController.swift; sourceTree = "<group>"; };
 		04317290204ECDDB00BF854F /* UBoutiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBoutiqueViewController.swift; sourceTree = "<group>"; };
+		0458949F205A4634003757B2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		0458A8D72058C54C00476866 /* UCreateArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCreateArtViewController.swift; sourceTree = "<group>"; };
 		0458A8D92059073600476866 /* UArtEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UArtEditTableViewCell.swift; sourceTree = "<group>"; };
 		0467F85B204FC8FD001D06C7 /* UHybridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHybridViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				04294354204D861E0019BFFA /* UIDeviceExtension.swift */,
 				04294355204D861E0019BFFA /* UIImageExtensions.swift */,
 				04294356204D861E0019BFFA /* UIViewExtension.swift */,
+				0458949F205A4634003757B2 /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 			files = (
 				0431728F204ECDCC00BF854F /* UHotArtViewController.swift in Sources */,
 				04317285204EC99E00BF854F /* UArticleViewController.swift in Sources */,
+				045894A0205A4634003757B2 /* UIImageViewExtension.swift in Sources */,
 				04294375204D8EB00019BFFA /* UPageViewController.swift in Sources */,
 				04294392204D90DD0019BFFA /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				04294390204D90DD0019BFFA /* UHairPowder.swift in Sources */,

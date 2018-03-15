@@ -19,7 +19,7 @@ function getBackArtjson(artModel,contentStr,title){
 var getArts = async ( ctx ) => {
 	var arts = await Article.findAll({});
 	let backArts = [];
-	for (var i = 0; i < arts.length; i++) {
+	for (var i = arts.length-1; i >= 0; i--) {
 		let art = arts[i];
 		let contentStr = fs.readFileSync(artDir+art.title, 'utf-8');
 		let backArt = getBackArtjson(art,contentStr,getClearTitle(art));
@@ -100,6 +100,7 @@ contentStr:文章内容
 */
 var editArt = async ( ctx ) => {
 	let postData = ctx.request.body
+	let saveTitle = postData.title+'---'+Date.now()
 
 	let artId = postData.artId
 	var arts = await Article.findAll({
@@ -108,12 +109,14 @@ var editArt = async ( ctx ) => {
         }
     });
     let art = arts[0];
-    let saveTitle = art.dataValues.title;
-
-	fs.writeFileSync(artDir+saveTitle, postData.contentStr);
+    let tmpTitle = art.dataValues.title;
+	fs.writeFileSync(artDir+tmpTitle, postData.contentStr);
+	fs.renameSync(artDir+tmpTitle, artDir+saveTitle)
+	tmpTitle = saveTitle
+    console.log('tmpTitle-----',tmpTitle);
 
 	var pram={
-        title: saveTitle,
+        title: tmpTitle,
         modified_time: Date.now()
     };
 	var success = await Article.update(pram,{

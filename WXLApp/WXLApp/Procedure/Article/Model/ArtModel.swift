@@ -29,10 +29,12 @@ func contentStrToArr(content:String) -> [ArtCellModel] {
     let strArr = content.components(separatedBy:contentSeparator)
     print(strArr)
     var result = [ArtCellModel]()
-    for str in strArr {
+    for var str in strArr {
         var model = ArtCellModel()
         if str.hasPrefix(imgadrMark) && str.hasSuffix(imgadrMark){
             model.isImg = true
+            str.removeFirst(5)
+            str.removeLast(5)
         }
         model.content = str
         result.append(model)
@@ -43,7 +45,10 @@ func contentStrToArr(content:String) -> [ArtCellModel] {
 func contentArrToStr(arr:[ArtCellModel]) -> String {
     var result = ""
     for i in 0..<arr.count {
-        let model = arr[i]
+        var model = arr[i]
+        if model.isImg == true{
+            model.content = imgadrMark+model.content!+imgadrMark
+        }
         result.append(model.content!)
         if i<arr.count-1{
             result.append(contentSeparator)

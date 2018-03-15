@@ -43,9 +43,11 @@ enum UAPI{
     case delArt(artId: Int)//删除文章
 }
 
+var imgServerPathUpload = "http://192.168.0.166:3001/uploadimage"
+var imgServerPathDownload = "http://192.168.0.166:3001/downloadImg/"
 extension UAPI: TargetType {
     
-    var baseURL: URL { return URL(string: "http://192.168.1.186:3000/")! }
+    var baseURL: URL { return URL(string: "http://192.168.0.166:3000/")! }
     
     var path: String {
         switch self {
