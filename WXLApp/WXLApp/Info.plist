@@ -25,6 +25,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许app使用你的相机</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>相册权限</string>
 	<key>UILaunchStoryboardName</key>

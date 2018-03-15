@@ -147,6 +147,7 @@ extension UCreateArtViewController{
         var model = ArtCellModel()
         model.isImg = false
         model.content = textEditTF.text
+        model.height = (model.content?.getLabHeight())! + 20
         
         refreshContentArr(model)
         
@@ -185,7 +186,28 @@ UINavigationControllerDelegate{
     
     @IBAction func addPhotoBtnTapped(_ sender: Any) {
         isAddingCell = true
+        selectedIndexPath = getCellIndex(sender)
+        showCamera()
         
+    }
+    
+    func showCamera()  {
+        //各种权限：http://blog.csdn.net/tianxiawoyougood/article/details/56016630
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            //初始化图片控制器
+            let picker = UIImagePickerController()
+            //设置代理
+            picker.delegate = self
+            //指定图片控制器类型
+            picker.sourceType = .camera
+            //设置是否允许编辑
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: {
+                () -> Void in
+            })
+        }else{
+            print("打开相机错误")
+        }
     }
     
     func showImgSelecter() {
@@ -255,6 +277,7 @@ UINavigationControllerDelegate{
                     var model = ArtCellModel()
                     model.isImg = true
                     model.content = filename
+                    model.height = UArtEditTableViewCellHeight+20
                     
                     self.refreshContentArr(model)
                 }
@@ -285,11 +308,11 @@ extension UCreateArtViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if !beingEditing {
-            return 110
+        let model = contentArr[(indexPath.row)]
+        if beingEditing == true {
+            return model.height!+50
         }
-        return 160
+        return model.height!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

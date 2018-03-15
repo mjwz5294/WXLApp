@@ -22,7 +22,9 @@ struct ArtModel: HandyJSON {
 
 struct ArtCellModel {
     var isImg = false
-    var content:String?
+    var content:String?=""
+    var height:CGFloat?=0
+    
 }
 
 func contentStrToArr(content:String) -> [ArtCellModel] {
@@ -35,6 +37,10 @@ func contentStrToArr(content:String) -> [ArtCellModel] {
             model.isImg = true
             str.removeFirst(5)
             str.removeLast(5)
+            model.height = UArtEditTableViewCellHeight+20
+        }else{
+            model.height = str.getLabHeight()+20
+            
         }
         model.content = str
         result.append(model)
@@ -60,3 +66,5 @@ func contentArrToStr(arr:[ArtCellModel]) -> String {
 struct ArtArrModel: HandyJSON {
     var artArr: [ArtModel]?
 }
+
+

@@ -9,6 +9,9 @@
 import UIKit
 import Kingfisher
 
+var UArtEditTableViewCellHeight = (screenWidth-20)/2248*3264
+
+
 class UArtEditTableViewCell: UBaseTableViewCell {
 
     @IBOutlet weak var textLab: UILabel!
@@ -17,6 +20,8 @@ class UArtEditTableViewCell: UBaseTableViewCell {
     @IBOutlet weak var selpicBtn: UIButton!
     @IBOutlet weak var addpicBtn: UIButton!
     @IBOutlet weak var btnContainer: UIView!
+    @IBOutlet weak var btnContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var imgHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +39,7 @@ class UArtEditTableViewCell: UBaseTableViewCell {
             guard let model = model else { return }
             if model.isImg {
                 textLab.isHidden = true
+                textLab.text = ""
                 imgView.isHidden = false
                 /*imgView设置图片，这里Kingfisher会对图片做缓冲，根据我这套图片设计机制，替换图片返回的是同样的名字，这样会导致客户端不会去服务端下载图片，因此图片也就替换不了。我这里的解决办法：
                  1、用一种不做缓存的图片加载方式
@@ -41,7 +47,10 @@ class UArtEditTableViewCell: UBaseTableViewCell {
                  这里我选择了第一种方式
                  */
 //                imgView.kf.setImage(with: ImageResource(downloadURL: URL(string: imgServerPathDownload+model.content!)!))
-                imgView.downloadedFrom(link: imgServerPathDownload+model.content!)
+                imgView.downloadedFrom(link: imgServerPathDownload+model.content!){(height,width) in
+//                    print(String(describing: height)+"---"+String(describing: width))
+                    self.imgHeight.constant = UArtEditTableViewCellHeight
+                }
             }else{
                 textLab.isHidden = false
                 textLab.text = model.content
@@ -56,6 +65,12 @@ class UArtEditTableViewCell: UBaseTableViewCell {
         addpicBtn.isEnabled = editable
         isUserInteractionEnabled = editable
         btnContainer.isHidden = !editable
+        if editable==true {
+            btnContainerHeight.constant = 50
+        }else{
+            btnContainerHeight.constant = 0
+        }
+        
     }
     
 }
